@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kusinho hj?</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #no-button {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>kusinho hj?</h1>
+    <div class="buttons">
+        <button id="yes-button">Sim</button>
+        <button id="no-button">Não</button>
+    </div>
+
+    <script>
+        const noButton = document.getElementById('no-button');
+
+        noButton.addEventListener('mouseenter', () => {
+            const offsetX = Math.random() * 200 - 100;
+            const offsetY = Math.random() * 200 - 100;
+            const currentX = noButton.offsetLeft;
+            const currentY = noButton.offsetTop;
+            noButton.style.left = `${currentX + offsetX}px`;
+            noButton.style.top = `${currentY + offsetY}px`;
+        });
+    </script>
+</body>
+</html>
